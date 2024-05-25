@@ -47,4 +47,4 @@ def app_settings(request, app):
             "month": app.capitalize()
         })
     except:
-        return HttpResponseNotFound("<h2>This app is not found!</h2>")
+        return HttpResponseNotFound("<h2>This webpage is not found!</h2>")
