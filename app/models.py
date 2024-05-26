@@ -6,7 +6,14 @@ from django.db import models
 class Monthly(models.Model):
 
     def __str__(self):
-        return self.january + "<br>" + self.febuary + "<br>" + self.febuary
+        return (
+            self.january + "<br>"
+            + self.febuary + "<br>"
+            + self.march + "<br>"
+            + self.april + "<br>"
+            + self.may + "<br>"
+            + self.june + "<br>"
+        )
 
     january = models.CharField(max_length=100)
     febuary = models.CharField(max_length=100)
