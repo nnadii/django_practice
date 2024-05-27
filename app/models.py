@@ -4,8 +4,8 @@ from django.db import models
 
 
 class Month(models.Model):
-    def __str__(self):
-        return self.name + self.value
+    # def __str__(self):
+    #     return self.name + self.value
 
     name = models.CharField(max_length=50)
     value = models.CharField(max_length=100)
