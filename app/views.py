@@ -1,28 +1,31 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
-from .models import Monthly
+from .models import Month
 
 
 # Create your views here.
 
 
 def index(request):
-    all_month = Monthly.objects.all()
-
-    for month in all_month:
-        return HttpResponse(month)
+    # all_month = Month.objects.all()
+    # for month in all_month:
+    #     return HttpResponse("<h2>" + str(month.name) + "</h2>")
+    return HttpResponse("Hello world")
 
 
 # def app_settings_with_number(request, app):
-#     application_month = list(app_settings_func.keys())
+#     all_month = Month.objects.all()
 
-#     if app > len(application_month):
-#         return HttpResponseNotFound("<h2>Invalid month</h2>")
+#     for month in all_month:
+#         application_month = list(str(month.january))
 
-#     redirect_app = application_month[app - 1]
-#     redirect_path = reverse("app_challenge", args=[redirect_app])
-#     return HttpResponseRedirect(redirect_path)
+#         if app > len(application_month):
+#             return HttpResponseNotFound("<h2>Invalid month</h2>")
+
+#         redirect_app = application_month[app - 1]
+#         redirect_path = reverse("app_challenge", args=[redirect_app])
+#         return HttpResponseRedirect(redirect_path)
 
 
 # def app_settings(request, app):
